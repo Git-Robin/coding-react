@@ -1,0 +1,85 @@
+{
+  "name": "prud",
+  "version": "1.0.0",
+  "description": "Coding challange to build a SPA to search books from the database",
+  "main": "start.js",
+  "scripts": {
+    "dev": "sudo rm dist/js/* & webpack --config config/webpack.config.js --progress --colors  --env development",
+    "test": "jest",
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Git-Robin/Prud.git"
+  },
+  "author": "Rabindra Kumar Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Git-Robin/Prud/issues"
+  },
+  "homepage": "https://github.com/Git-Robin/Prud#readme",
+  "dependencies": {
+    "antd": "^3.11.0",
+    "apollo-boost": "^0.1.22",
+    "apollo-server-express": "^2.2.6",
+    "cors": "^2.8.5",
+    "css-loader": "^1.0.1",
+    "enzyme": "^3.7.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "graphql-tools": "^4.0.3",
+    "jest": "^23.6.0",
+    "jest-enzyme": "^7.0.1",
+    "react": "^16.6.3",
+    "react-apollo": "^2.3.2",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.6.3",
+    "request-promise": "^4.2.2",
+    "style-loader": "^0.23.1",
+    "unfetch": "^4.0.1",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/enzyme/"
+    ],
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/config/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}

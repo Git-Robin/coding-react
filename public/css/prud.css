@@ -1,0 +1,97 @@
+/* layout container*/
+div.layoutcontainer{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+.layoutcontainer div.header {
+    width: inherit; 
+    height: 120px;
+    display: flex;
+    overflow: hidden;
+    border-bottom: blue;
+    border-bottom-style: solid;
+}
+.layoutcontainer .header div.logo {
+    width: 70%;
+    height: inherit;
+    float: left;
+}
+.layoutcontainer .header div.searchinput {
+    width: 30%;
+    height: inherit;
+    position: relative;
+}
+.layoutcontainer div.footer {
+    position: relative; 
+    width: inherit;
+    height: 30px;
+    background-color: black;
+}
+.layoutcontainer .footer span.footertext {
+    margin-left: 40%;
+    color: white;
+}
+
+/* search container*/
+
+div.searchcontainer {
+    height: inherit;
+    display: flex;
+}
+.searchcontainer div.search-sider {
+    width: 35%;
+    float: left;
+    height: inherit;
+    min-height: 100%;
+    background-color: #F4F5F7;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.searchcontainer div.search-body {
+    width: 65%;
+    height: inherit;
+    min-height: "100%";
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+div.searchresults {
+    height: inherit;
+}
+span.result-count{
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 700;
+    color: #2793df;
+}
+span.for{
+    font-family: "Gotham A", "Gotham B";
+    font-style: italic;
+    font-weight: 400;
+    color: #AAA;
+    margin-right: 0.5em;
+}
+div.search-result {
+    padding: 1em 0;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid #BABABA;
+}
+div.no-searchresult-message{
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold
+}
+div.viewbook {
+    height: inherit;
+}
+.viewbook span.viewbook-header {
+    font-size: 16px;
+    font-weight: bold;
+}
+.viewbook span.viewbook-value {
+    margin-left: 5px;
+}
+.viewbook div.viewbook-image {
+    width: 120px;
+}

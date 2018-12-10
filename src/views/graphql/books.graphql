@@ -1,0 +1,15 @@
+query Books($query: String!, $page: Int!) { 
+    Books(query: $query, page: $page) {
+        total
+        start
+        end
+        books{
+            id
+            name
+            author
+            rating
+            cover
+            reviews
+        }
+    }
+}
