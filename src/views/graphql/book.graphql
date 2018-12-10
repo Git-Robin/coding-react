@@ -1,0 +1,7 @@
+query Book($id: Int!) { 
+    Book(id: $id) {
+        cc
+        py
+        description
+    }
+}
