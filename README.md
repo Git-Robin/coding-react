@@ -16,17 +16,15 @@ Search coding challenge
     2 - GOODREADS_SECRET_KEY (mandatory) - secret key from Setup step
 
 ## Steps to install, build, test and run
-Checkout the code from github project https://github.com/Git-Robin/coding-react into local folder
-Open a command prompt or terminal (as per OS)
-Go to the specified folder, for e.g. test/coding-react
-Run command "npm install"
-After successfull completion run command "npm run build"
-After successfull build run command "npm start". The application will be available at http://<hostname>:<portnumber>/
-Snapshot test command "npm test -- -u"
-Graphql api's can be tested using browser with inbuilt graphiql using url http://<hostname>:<portnumber>/graphql
-Specifications can be found in Docs
-Sample queries:
-
+1 - Checkout the code from github project https://github.com/Git-Robin/coding-react into local folder
+2 - Open a command prompt or terminal (as per OS)
+3 - Go to the specified folder, for e.g. test/coding-react
+4 - Run command "npm install"
+5- After successfull completion run command "npm run build"
+6 - After successfull build run command "npm start". The application will be available at http://<hostname>:<portnumber>/
+7 - Snapshot test command "npm test -- -u"
+8 - Graphql api's can be tested using browser with inbuilt graphiql using url http://<hostname>:<portnumber>/graphql. Specifications can be found in Docs.
+9 - Sample queries:
 
 {
   Books(query: "harry", page: 3) {
@@ -57,4 +55,3 @@ Sample queries:
 2 - Authentication can be added to make it more secure
 3 - instead of http, https protocol can be used
 4 - More test coverage
-
