@@ -1,14 +1,21 @@
 # coding-react
 Search coding challenge
 
-#Setup step
+## Table of Contents
+
+- [Setup step](#setup-step)
+- [Environment variables](#environment-variables)
+- [Steps to install, build, test and run](#install)
+- [Imporovements when given more time](#mporovements)
+
+##Setup step
     Create an account at this URL https://www.goodreads.com/api/index and get a secret key by filling out details at https://www.goodreads.com/api/keys
 
-#Environment variables
+##Environment variables
     1 - CODING_PORT (optional), by default value will be 3006
     2 - GOODREADS_SECRET_KEY (mandatory) - secret key from Setup step
 
-#Steps to install and build
+##Steps to install, build, test and run
 Checkout the code from github project https://github.com/Git-Robin/coding-react into local folder
 Open a command prompt or terminal (as per OS)
 Go to the specified folder, for e.g. test/coding-react
@@ -45,7 +52,7 @@ Sample queries:
   }
 }
 
-#Imporovements when given more time
+##Imporovements when given more time
 1 - UI/UX can be imporoved
 2 - Authentication can be added to make it more secure
 3 - instead of http, https protocol can be used
