@@ -4,20 +4,20 @@
   "description": "Coding challange to build a SPA to search books from the database",
   "main": "start.js",
   "scripts": {
-    "dev": "sudo rm dist/js/* & webpack --config config/webpack.config.js --progress --colors  --env development",
+    "build": "sudo rm dist/js/* & webpack --config config/webpack.config.js --progress --colors  --env development",
     "test": "jest",
     "start": "node start.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Git-Robin/Prud.git"
+    "url": "git+https://github.com/Git-Robin/coding-react.git"
   },
   "author": "Rabindra Kumar Srivastava",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Git-Robin/Prud/issues"
+    "url": "https://github.com/Git-Robin/coding-react/issues"
   },
-  "homepage": "https://github.com/Git-Robin/Prud#readme",
+  "homepage": "https://github.com/Git-Robin/coding-react#readme",
   "dependencies": {
     "antd": "^3.11.0",
     "apollo-boost": "^0.1.22",
@@ -25,6 +25,7 @@
     "cors": "^2.8.5",
     "css-loader": "^1.0.1",
     "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
