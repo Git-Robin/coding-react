@@ -41,9 +41,7 @@
     "request-promise": "^4.2.2",
     "style-loader": "^0.23.1",
     "unfetch": "^4.0.1",
-    "xml2js": "^0.4.19"
-  },
-  "devDependencies": {
+    "xml2js": "^0.4.19",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "babel-loader": "^7.1.2",
@@ -54,6 +52,9 @@
     "babel-register": "^6.26.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {
+
   },
   "jest": {
     "setupFiles": [
