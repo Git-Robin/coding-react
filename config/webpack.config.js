@@ -36,6 +36,7 @@ module.exports = (env) => {
         },
 
         output: {
+            publicPath: "/",
             path: __dirname+"/../dist/js/",
             filename: "[name].min.js",
             chunkFilename: "[id].[hash].bundle.js",
