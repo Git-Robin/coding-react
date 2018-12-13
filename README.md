@@ -12,7 +12,7 @@ Search coding challenge
     Create an account at this URL https://www.goodreads.com/api/index and get a secret key by filling out details at https://www.goodreads.com/api/keys
 
 ## Environment variables
-    1 - CODING_PORT (optional), by default value will be 3006
+    1 - PORT (optional), by default value will be 3000
     2 - GOODREADS_SECRET_KEY (mandatory) - secret key from Setup step
 
 ## Steps to install, build, test and run
