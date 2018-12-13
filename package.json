@@ -6,6 +6,7 @@
   "scripts": {
     "build": "sudo rm dist/js/* & webpack --config config/webpack.config.js --progress --colors  --env development",
     "test": "jest",
+    "postinstall": "sudo rm dist/js/* & webpack --config config/webpack.config.js --progress --colors  --env development",
     "start": "node start.js"
   },
   "repository": {
