@@ -9,7 +9,7 @@ import bodyParser from "body-parser";
 
 global.ROOT_PATH = __dirname;
 
-const port = process.env.CODING_PORT || 3006;
+const port = process.env.PORT || 3000;
 
 /**
  * Static folder paths
