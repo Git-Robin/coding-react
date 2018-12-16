@@ -26,6 +26,7 @@ export default {
                                         id: work.best_book[0].id[0]._,
                                         name: work.best_book[0].title[0],
                                         author: work.best_book[0].author[0].name[0],
+                                        authorId: work.best_book[0].author[0].id[0]._,
                                         rating: work.average_rating[0],
                                         reviews: work.text_reviews_count[0]._,
                                         cover: work.best_book[0].image_url[0]
@@ -79,6 +80,39 @@ export default {
                             }
                         }
     
+                        resolve(finalData);
+                    }
+                })
+            ).catch((error) => {
+                reject(error);
+            });
+        });
+    },
+    
+    getDescription(id, key) {
+        var finalData = {};
+        var url = `https://www.goodreads.com/author/show.xml?key=${key}&id=${id}`;
+
+        //finalData = {id: 1, description: "test"}
+
+        return new Promise((resolve, reject) => {
+            request.get(
+                url
+            ).then(result =>
+                parseString(result, (err, goodreadsResult) => {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        finalData.id = id;
+                        if(goodreadsResult.GoodreadsResponse.author) {
+                            let author = goodreadsResult.GoodreadsResponse.author[0];
+                            
+                            if(author.about) {
+                                finalData.description = author.about[0]
+                            } else {
+                                finalData.description = "";
+                            }                            
+                        }    
                         resolve(finalData);
                     }
                 })
