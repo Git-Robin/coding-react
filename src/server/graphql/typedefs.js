@@ -3,11 +3,17 @@ const typeDefs = `
     id: Int!
     name: String,
     author: String,
+    authorId: Int,
     rating: String,
     cover: String,
     reviews: Int,
     cc: String,
     py: String,
+    description: String
+  }
+
+  type Author {
+    id: Int!,
     description: String
   }
 
@@ -22,6 +28,7 @@ const typeDefs = `
   type Query {
     Book(id: Int!): Book
     Books(query: String!, page: Int!): Search
+    Description(id: Int!): Author
   }
 `;
 

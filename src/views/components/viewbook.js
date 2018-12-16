@@ -3,6 +3,7 @@ import { Card } from "antd";
 const { Meta } = Card;
 import { Query } from "react-apollo";
 import ErrorBoundry from "./errorboundry";
+import ViewAuthor from "./viewauthor";
 import "../../../public/css/prud.css";
 import "antd/dist/antd.css";
 
@@ -19,6 +20,21 @@ const BOOK_QUERY = gql`
 `;
 
 export default class ViewBook extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isDescOpen: false,
+            divdisplay: "none"
+        }
+
+        this.openAuthor = this.openAuthor.bind(this);
+    }
+
+    openAuthor() {
+        this.setState({isDescOpen: true, divdisplay: "block"});
+    }
+
     render() {
         return (
             <ErrorBoundry>
@@ -60,12 +76,18 @@ export default class ViewBook extends Component {
                                                 : <div dangerouslySetInnerHTML={{ __html: "" }} />
                                         }
                                     />
-                                    <p>
+                                    <div>
                                         <span>
                                             <span className="viewbook-header"> Author:</span>
-                                            <span className="viewbook-value">{bookProps.author}</span>
+                                            <a id={bookProps.authorId} onClick={this.openAuthor}>{bookProps.author}</a>
+                                            {
+                                                this.state.isDescOpen &&
+                                                <div style={{display: this.state.divdisplay}}>
+                                                    <ViewAuthor id={bookProps.authorId}/>
+                                                </div>
+                                            }
                                         </span>
-                                    </p>
+                                    </div>
                                     <p>
                                         <span>
                                             <span className="viewbook-header"> Rating:</span>
